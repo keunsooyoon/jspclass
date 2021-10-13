@@ -1,0 +1,61 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인 인증</title>
+</head>
+<body>
+<%
+	String userid = "admin";
+	String userpw = "0000";
+
+	String login_id = "admin";
+	String login_pw = "0000";
+	
+	String msg = "";
+	
+	if ((userid == login_id) & (userpw == login_pw)) {
+		msg = "아이디와 비번이 일치합니다.";
+	} else {
+		msg = "아이디와 비번이 일치하지 않습니다.";
+	}
+
+%>
+
+로그인 인증 = <%=msg %>
+
+<%
+
+int year = 3;
+String msg1 = "";
+
+switch (year){
+case 1: msg1 = "freshman";
+		break;
+case 2: msg1 = "sophomore";
+		break;
+case 3: msg1 = "junior";
+		break;
+case 4: msg1 = "senior";
+		break;
+
+default : msg1 = "오류";
+}
+
+%>
+
+<%=msg1 %>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

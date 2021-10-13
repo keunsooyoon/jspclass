@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	String cust_id = request.getParameter("id");
+	String cust_pw = request.getParameter("pw");
+
+	out.print(cust_id + "<br>");
+	out.print(cust_pw);
+	
+	response.sendRedirect("redirect.jsp");
+%>
+
+	<p><a href="redirect.jsp">[폼으로 돌아가기]</a></p>
+</body>
+</html>
