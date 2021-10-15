@@ -34,7 +34,7 @@
 	if (login) {  //로그인 상태
 		out.print("<input type='submit' value='로그인' disabled>" +
 				  "<input type='button' value='(" + cust_name + ")님 로그 아웃' " +
-				  "onClick=lication.href='./logout.jsp'></td>");
+				  "onClick=location.href='./logout.jsp'></td>");
 	} else { //로그아웃 경우 버튼
 		out.print("<input type='submit' value='로그인'>"
 		+ "<input type='button' value='로그아웃' disabled></td>");
