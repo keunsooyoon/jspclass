@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\jspclass\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\jspclass\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\day4" path="/day4" reloadable="true" source="org.eclipse.jst.jee.server:day4"/></Host>
+      <Context docBase="C:\jspclass\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\jspclass\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\day4" path="/day4" reloadable="true" source="org.eclipse.jst.jee.server:day4"/><Context docBase="C:\jspclass\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\jspproject" path="/jspproject" reloadable="true" source="org.eclipse.jst.jee.server:jspproject"/><Context docBase="C:\jspclass\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\WebMarket" path="/WebMarket" reloadable="true" source="org.eclipse.jst.jee.server:WebMarket"/></Host>
     </Engine>
   </Service>
 </Server>
