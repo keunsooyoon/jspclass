@@ -1,4 +1,5 @@
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <tr>
 	<th>비밀번호</th>
 	<td><input type="password" name="cust_pw" size="11" maxlength="11">
