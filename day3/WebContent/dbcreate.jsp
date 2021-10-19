@@ -33,9 +33,19 @@ String pw = "0000";
 try {
 	conn = DriverManager.getConnection(url, id, pw);
 	out.print("MariaDB 연결 성공 !");
+	
+	
+	
+	
+	
+	
+	
+	
 } catch (SQLException sqlerr) {
 	out.print("실패");
 	out.print(sqlerr.getMessage());
+} finally {
+	
 }
 
 
