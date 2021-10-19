@@ -16,9 +16,9 @@ public class DbConnClose {
 		}
 		
 		//database 연결
-		String url = "jdbc:mariadb://localhost:3307/univ";
+		String url = "jdbc:mariadb://localhost:3306/shopmall";
 		String id = "root";
-		String pw = "0000";
+		String pw = "1234";
 		
 		Connection conn = null;
 		
