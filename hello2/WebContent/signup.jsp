@@ -11,6 +11,13 @@
 	
 	UserDAO dao = new UserDAO();
 	
+	if (dao.exists(uid)) {
+		out.print("이미 존재하는 아이디입니다. ");
+		return;
+	}
+	
+	
+	
 	if (dao.insert(uid,upass,uname)) {
 		out.print("회원 가입 완료");
 	} else {

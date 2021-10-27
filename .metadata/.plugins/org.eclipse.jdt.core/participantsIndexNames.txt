@@ -45,6 +45,8 @@ C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1406213844.ind
 \Hello\src
 C:\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\648987399.index
 \test\src
+C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\741489393.index
+\sns\src
 C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2657199973.index
 \day2\src
 C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2504049282.index
