@@ -16,7 +16,7 @@
 		
 	if(dao.insert(uid, upass, uname)){
 		session.setAttribute("id", uid);
-		response.sendRedirect("main.jsp");
+		response.sendRedirect("mainDAO.jsp");
 	} else {
 		out.print("회원 가입 중 오류 발생, 재가입해주세요");
 		response.sendRedirect("signup.html");
