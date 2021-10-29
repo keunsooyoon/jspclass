@@ -17,6 +17,8 @@ C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3394584533.ind
 \WebMarket\src
 C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1039371428.index
 \day2\src
+C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3766667075.index
+\YourSNS\src
 C:\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2657199973.index
 \day2\src
 C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3357323055.index
