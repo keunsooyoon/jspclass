@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>할일작성</title>
+<meta name=viewport
+	content="width=device-width, initial-scale=1, user-scalable=0">
+<!-- 모바일용으로 화면 해상도 설정 -->
+<link rel="stylesheet" href="css/core.css">
+<style>
+.desc {
+	float: left;
+	width: 100%;
+	color: #888;
+	font-size: 0.9em;
+}
+
+textarea {
+	float:left;
+	width: 100%;
+	height: 160px;
+	padding:16px;
+	box-sizing: border-box;
+	font-size: 1.0em;
+	font-family:'Malgun Gothic', 'Arial';
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	outline:none;
+}
+input[type=file] {
+	padding: 0px;
+	border:none;
+	outline: none;
+	font-size:0.95em;
+}
+</style>
+</head>
+<body>
+
+	<form action="todoAdd.jsp" method="post">
+		<div class="page-hdr">할일작성</div>
+		<div class="page-body">
+			<div class="section pad-24 mtop-30">
+
+				<textarea name="todo" placeholder="할일" class="mtop-10"></textarea>
+
+				<div class="section pad-24 mtop-30">
+
+			 <input type="submit" value="할일등록">
+				</div>
+			</div>
+		</div>
+		<div class="page-footer">Copyright: mysns.com, 2021</div>
+	</form>
+</body>
+</html>

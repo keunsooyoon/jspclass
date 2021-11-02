@@ -60,5 +60,30 @@ public class TodoDAO {
 		
 	}
 	
+	public boolean insert(String utodo) 
+			throws NamingException, SQLException {
+	
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		String uid = "111";
+		String udone = "1";
+		try {
+			String sql = "INSERT INTO todo (id, todo, done) VALUES (?,?,?)";
+			conn = ConnectionPool.get();
+			stmt = conn.prepareStatement(sql);
+				stmt.setString(1, uid);
+				stmt.setString(2, utodo);
+				stmt.setString(3, udone);
+
+			int count = stmt.executeUpdate();
+			
+			return (count == 1) ? true : false;
+
+		} finally {
+			if(stmt != null) stmt.close();
+			if(conn != null) conn.close();
+		}
+	}
+	
 	
 }
