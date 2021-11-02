@@ -8,6 +8,35 @@ import javax.naming.NamingException;
 import util.ConnectionPool;
 
 public class TodoDAO {
+	
+	public ArrayList<TodoObj> getDelList() 
+			throws NamingException, SQLException {
+	
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		
+		try {
+			String sql = "SELECT no, id, todo, done, ts FROM todo WHERE id='111' and done=0 ORDER BY ts DESC";
+			conn = ConnectionPool.get();
+			stmt = conn.prepareStatement(sql);
+			
+			rs = stmt.executeQuery();
+			
+			ArrayList<TodoObj> feeds = new ArrayList<TodoObj>() ;
+			
+			while(rs.next()) {
+				feeds.add(new TodoObj(rs.getString("no"),rs.getString("id"),
+						rs.getString("todo"), rs.getString("done"), rs.getString("ts")));
+			}
+			return feeds;
+		} finally {
+			if(rs != null) rs.close();
+			if(stmt != null) stmt.close();
+			if(conn != null) conn.close();
+		}
+		
+	}
 
 	public ArrayList<TodoObj> getList() 
 			throws NamingException, SQLException {
@@ -59,6 +88,28 @@ public class TodoDAO {
 		}
 		
 	}
+	public boolean undel(String no) 
+			throws NamingException, SQLException {
+	
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		
+		try {
+			String sql = "UPDATE todo SET done=1 WHERE no =?";
+			conn = ConnectionPool.get();
+			stmt = conn.prepareStatement(sql);
+				stmt.setString(1, no);
+			int count = stmt.executeUpdate();
+			
+			return (count == 1) ? true : false;
+
+		} finally {
+			if(stmt != null) stmt.close();
+			if(conn != null) conn.close();
+		}
+		
+	}
+	
 	
 	public boolean insert(String utodo) 
 			throws NamingException, SQLException {

@@ -1,4 +1,8 @@
-
+<%@page import="dao.TodoDAO"%>
+<%@page import="dao.TodoObj"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!doctype html>
 
   <head>
@@ -13,34 +17,8 @@
         <!-- Custom styles for this template -->
     <link href="./css/navbar.css" rel="stylesheet">
     
-	<link rel="stylesheet" href="css/core.css">
-<style>
-.desc {
-	float: left;
-	width: 100%;
-	color: #888;
-	font-size: 0.9em;
-}
-
-textarea {
-	float:left;
-	width: 100%;
-	height: 160px;
-	padding:16px;
-	box-sizing: border-box;
-	font-size: 1.0em;
-	font-family:'Malgun Gothic', 'Arial';
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	outline:none;
-}
-input[type=file] {
-	padding: 0px;
-	border:none;
-	outline: none;
-	font-size:0.95em;
-}
-
+    
+    <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -66,7 +44,7 @@ input[type=file] {
   <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">할일목록앱 <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="./main.jsp">할일목록앱 <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="./todoAdd.html">할일등록</a>
@@ -88,25 +66,46 @@ input[type=file] {
   </div>
 </nav>
 
-	<form action="todoAdd.jsp" method="post">
-		
-			<div class="section pad-24 mtop-30">
 
-				<textarea name="todo" placeholder="할일" class="mtop-10"></textarea>
 
-				<div class="section pad-24 mtop-30">
 
-			 <input type="submit" value="할일등록">
-				</div>
-			</div>
 
-		<div class="page-footer">Copyright: mysns.com, 2021</div>
-	</form>
-	
-	   
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">할일</th>
+      <th scope="col">작성시간</th>
+      <th scope="col">복구</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+<%
+	ArrayList<TodoObj> feeds = (new TodoDAO()).getDelList();
+
+	int i = feeds.size();
+	for (TodoObj feed : feeds) {
+%>  
+    <tr>
+      <th scope="row"><%=i %></th>
+      <td><%=feed.getTodo() %></td>
+      <td><%=feed.getTs() %></td>
+      <td><a href = "untodo.jsp?no=<%=feed.getNo() %>">복구</a></td>
+    </tr>
+
+<% 
+	i--;
+	}
+%>
+
+  </tbody>
+</table>
+   
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="./js/jquery-slim.min.js"><\/script>')</script><script src="./js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
 
+   
    
 </body>
 </html>
