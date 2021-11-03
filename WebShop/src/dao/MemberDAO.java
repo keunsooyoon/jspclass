@@ -45,7 +45,7 @@ public class MemberDAO {
 				
 			try {
 				String sql = "INSERT INTO member (cid, cpassword, cname, cgender, cbirth, cemail, cphone, caddress, cregiday) "
-						+ "VALUES(?,?,?,?,?,?,?,?,?,?)";
+						+ "VALUES(?,?,?,?,?,?,?,?,?)";
 				
 				conn = ConnectionPool.get();
 				stmt = conn.prepareStatement(sql);
@@ -62,7 +62,6 @@ public class MemberDAO {
 				int count = stmt.executeUpdate();
 				return (count == 1) ? true : false;
 				
-		
 			} finally {
 				if (rs != null) rs.close();
 				if (stmt != null) stmt.close();
