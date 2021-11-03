@@ -26,13 +26,13 @@
     <link href="/resource/css/signin.css" rel="stylesheet">
 </head>
  <body class="text-center">
-    <form class="form-signin">
+    <form class="form-signin" action="loginCheck.jsp" method="post">
   <img class="mb-4" src="/resource/image/mine.jpg" alt="" width="72" height="72">
   <h1 class="h3 mb-3 font-weight-normal">로그인</h1>
   <label for="inputEmail" class="sr-only">아이디</label>
-  <input type="email" id="inputEmail" class="form-control" placeholder="아이디" required autofocus>
+  <input type="text" id="inputEmail" name="id" class="form-control" placeholder="아이디" required autofocus>
   <label for="inputPassword" class="sr-only">비밀번호</label>
-  <input type="password" id="inputPassword" class="form-control" placeholder="비밀번호" required>
+  <input type="password" id="inputPassword" name="pass" class="form-control" placeholder="비밀번호" required>
 
   <button class="btn btn-lg btn-primary btn-block" type="submit">로그인</button>
   <p class="mt-5 mb-3 text-muted">&copy; Austin 2021</p>
