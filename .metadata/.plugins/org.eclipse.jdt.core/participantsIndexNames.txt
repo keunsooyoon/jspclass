@@ -41,6 +41,8 @@ C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2097701226.ind
 \MySNS\src
 C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3789748112.index
 \WebShop\src
+C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\8070228.index
+\WebShop\src
 C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1901855365.index
 \day4\src
 C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3925833109.index
