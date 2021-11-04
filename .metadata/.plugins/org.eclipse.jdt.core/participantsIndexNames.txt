@@ -11,6 +11,8 @@ C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3808110815.ind
 \jspproject\src
 C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1487123134.index
 \jwbook\src\main\java
+C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1635163702.index
+\WebShop2\src
 C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1209131129.index
 \hello2\src
 C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1284170436.index
@@ -43,6 +45,8 @@ C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2097701226.ind
 \MySNS\src
 C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3789748112.index
 \WebShop\src
+C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4050995649.index
+\WebShop2\src
 C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\8070228.index
 \WebShop\src
 C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1901855365.index

@@ -16,7 +16,7 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             쇼핑몰</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">제품목록</a></li>
+            <li><a class="dropdown-item" href="/product/products.jsp">제품목록</a></li>
             <li><a class="dropdown-item" href="#">장바구니</a></li>
           </ul>
         </li>
@@ -32,7 +32,7 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            회원관리</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">로그인</a></li>
+            <li><a class="dropdown-item" href="/member/loginMember.jsp">로그인</a></li>
             <li><a class="dropdown-item" href="#">로그아웃</a></li>
             <li><a class="dropdown-item" href="#">회원가입</a></li>
             <li><a class="dropdown-item" href="#">회원탈퇴</a></li>
