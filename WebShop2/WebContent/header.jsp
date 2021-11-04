@@ -43,8 +43,8 @@
             관리자
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">제품관리</a></li>
-            <li><a class="dropdown-item" href="#">회원관리</a></li>
+            <li><a class="dropdown-item" href="/product/addProduct.jsp">제품등록</a></li>
+            <li><a class="dropdown-item" href="/member/listMember.jsp">회원관리</a></li>
           </ul>
         </li>
       </ul>

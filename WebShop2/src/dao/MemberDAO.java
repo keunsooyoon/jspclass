@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 import javax.naming.NamingException;
 
@@ -59,9 +60,39 @@ public class MemberDAO {
 			if (rs != null) rs.close();
 			if (stmt != null) stmt.close();
 			if (conn != null) conn.close();
-		}
-		
-		
+		}	
 	}
+
 	
+	
+	
+	public ArrayList<MemberObj> getList()
+			throws NamingException, SQLException {
+			
+			Connection conn = null;
+			PreparedStatement stmt = null;
+			ResultSet rs = null;
+			
+			try {
+				String sql = "SELECT * FROM member";
+				
+				conn = ConnectionPool.get();
+				stmt = conn.prepareStatement(sql);
+				rs = stmt.executeQuery();
+				
+				ArrayList<MemberObj> members = new ArrayList<MemberObj>();
+
+				while(rs.next()) {
+					members.add(new MemberObj(rs.getString("cid"),rs.getString("cpassword"),
+							rs.getString("cname"),rs.getString("cgender"),rs.getString("cbirth"),
+							rs.getString("cemail"),rs.getString("cphone"),
+							rs.getString("caddress"),rs.getString("cregiday")
+							));
+				} return members;
+			}finally {
+				if (rs != null) rs.close();
+				if (stmt != null) stmt.close();
+				if (conn != null) conn.close();
+			}
+		}
 }
