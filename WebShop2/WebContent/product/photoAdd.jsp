@@ -1,4 +1,4 @@
-<%@page import="util.FileUtil"%>
+<%@page import="java.io.*"%>
 <%@page import="java.util.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -37,7 +37,9 @@
 			if (name.equals("photo")) {
 				ufname = item.getName();
 				ufile = item.get();
-				FileUtil.saveImage(ufname, ufile);
+				
+				File file = new File("c:/photos/" + ufname);
+				item.write(file);
 			}
 		}
 	}

@@ -15,12 +15,10 @@
 	<%
 		ArrayList<ProductObj> products = (new ProductDAO()).getList();
 	%>
-	<div class="jumbotron">
-		<div class="container">
+
+<div class="alert alert-secondary" role="alert">
 			<h1 class="display-3">상품 목록</h1>
-		</div>
-	</div>
-	
+</div>	
 		<div class = "container">
 			<div class="row" align="center">
 				<%

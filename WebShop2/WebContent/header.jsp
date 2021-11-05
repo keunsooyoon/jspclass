@@ -34,7 +34,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="/member/loginMember.jsp">로그인</a></li>
             <li><a class="dropdown-item" href="#">로그아웃</a></li>
-            <li><a class="dropdown-item" href="#">회원가입</a></li>
+            <li><a class="dropdown-item" href="/member/joinMember.jsp">회원가입</a></li>
             <li><a class="dropdown-item" href="#">회원탈퇴</a></li>
           </ul>
         </li>

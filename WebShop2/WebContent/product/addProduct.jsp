@@ -8,16 +8,14 @@
 </head>
 <body>
 <%@ include file = "/header.jsp" %>
-	<div class="jumbotron">
-		<div class="container">
-			<h1 class="display-3">제품 등록</h1>
-		</div>
-	</div>
 
+<div class="alert alert-secondary" role="alert">
+  <h1 class="display-3">제품 등록</h1>
+</div>
 
 
 	<div class="container">
-		<form name="newProduct" class="form-horizontal"  action="addCheck.jsp" method="post" onsubmit="return checkForm()">
+		<form name="newProduct" class="form-horizontal"  action="addCheck.jsp" method="post" enctype="multipart/form-data">
 			<div class="form-group  row">
 				<label class="col-sm-2 ">제품ID</label>
 				<div class="col-sm-3">
@@ -33,7 +31,7 @@
 			<div class="form-group  row">
 				<label class="col-sm-2">제품설명</label>
 				<div class="col-sm-3">
-					<input name="description" type="text" class="form-control" placeholder="about">
+					<textarea name="description" rows="5" cols="20" class="form-control" placeholder="about"></textarea>
 				</div>
 			</div>
 			<div class="form-group  row">

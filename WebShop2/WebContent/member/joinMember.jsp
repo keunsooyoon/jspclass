@@ -23,11 +23,9 @@
 </head>
 <body>
 	<jsp:include page="/header.jsp" />
-	<div class="jumbotron">
-		<div class="container">
+<div class="alert alert-secondary" role="alert">
 			<h1 class="display-3">회원 가입</h1>
-		</div>
-	</div>
+</div>	
 
 	<div class="container">
 		<form name="newMember" class="form-horizontal"  action="joinCheck.jsp" method="post" onsubmit="return checkForm()">
