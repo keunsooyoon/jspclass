@@ -24,8 +24,8 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             게시판</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">글목록</a></li>
-            <li><a class="dropdown-item" href="#">글작성</a></li>
+            <li><a class="dropdown-item" href="/board/listBoard.jsp">글목록</a></li>
+            <li><a class="dropdown-item" href="/board/addBoard.jsp">글작성</a></li>
           </ul>
         </li>
        <li class="nav-item dropdown">

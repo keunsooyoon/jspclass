@@ -51,6 +51,8 @@ C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\8070228.index
 \WebShop\src
 C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1901855365.index
 \day4\src
+C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2012438419.index
+\WebShop2\src
 C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3925833109.index
 \day1\src
 C:\jspclass\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\225126360.index
