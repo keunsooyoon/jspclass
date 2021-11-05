@@ -37,7 +37,7 @@
 				pfile = item.get();  // 진짜 사진만 추출
 				
 				//사진을 파일로 특정 위치에 저장
-				File file = new File("c:/photos/" + pfilename);
+				File file = new File("/photos/" + pfilename);
 				item.write(file);
 			}
 		}
