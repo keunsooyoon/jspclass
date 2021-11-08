@@ -14,7 +14,8 @@
 			<h1 class="display-3">상세보기</h1>
 </div>
 <%
-	String a = "2";
+	String a = request.getParameter("id");
+
 	BoardObj board = (new BoardDAO()).getDetail(a);
 
 %>
