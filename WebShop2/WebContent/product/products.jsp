@@ -25,7 +25,7 @@
 					for (ProductObj product : products) {
 				%>
 			<div class="col-md-4">
-				<img src="/photos/<%=product.getPfilename() %>" style="width:100%">
+				<img src="/images/<%=product.getPfilename() %>" style="width:100%">
 				<h3><%=product.getPname() %></h3>
 				<p><%=product.getPprice() %>원	
 				<p><a href="" class="btn btn-secondary" role="button">상세정보 &raquo;</a>		

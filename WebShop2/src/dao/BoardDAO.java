@@ -69,8 +69,45 @@ public class BoardDAO {
 			if(stmt != null) stmt.close();
 			if(conn != null) conn.close();
 		}
+	}
+	
+	public BoardObj getDetail(String bid) throws NamingException, SQLException {
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		
+		try { 
+			String sql = "SELECT * FROM board WHERE bid = ?";
+			
+			conn = ConnectionPool.get();
+			stmt = conn.prepareStatement(sql);
+				stmt.setString(1, bid);
+			rs = stmt.executeQuery();
+			
+			rs.next();
+			
+			String id = rs.getString(1);
+			String title = rs.getString(2);
+			String content = rs.getString(3);
+			String member = rs.getString(4);
+			String filename = rs.getString(5);
+			String date = rs.getString(6);
+
+			BoardObj board = new BoardObj(id, title, content, member, filename, date);
+			
+			return board;
+		}finally {
+			if(rs != null) rs.close();
+			if(stmt != null) stmt.close();
+			if(conn != null) conn.close();
+		}
+		
 		
 		
 		
 	}
+	
+	
+	
+	
 }

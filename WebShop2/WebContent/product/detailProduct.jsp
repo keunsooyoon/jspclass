@@ -14,7 +14,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-ma-5">
-				<img src="/photos/<%=product.getPfilename()%>" style="width: 100%" />
+				<img src="/images/<%=product.getPfilename()%>" style="width: 100%" />
 			</div>
 			<div class = "col-md-6">
 				<h3><%=product.getPname() %></h3>

@@ -112,7 +112,7 @@ public MemberObj getDetail(String cid) throws NamingException, SQLException{
 			
 			conn = ConnectionPool.get();
 			stmt = conn.prepareStatement(sql);
-			stmt.setNString(1, cid);
+				stmt.setNString(1, cid);
 			rs = stmt.executeQuery();
 		
 			rs.next();
@@ -129,16 +129,8 @@ public MemberObj getDetail(String cid) throws NamingException, SQLException{
 			
 			MemberObj member = new MemberObj(id,ps,name,gender,birth,email,phone,addr,date);
 
-			/*			MemberObj member = new MemberObj("","","","","","","","","");
-			
-			while(rs.next()) {
-				member = new MemberObj(rs.getString("cid"),rs.getString("cpassword"),rs.getString("cname")
-			,rs.getString("cgender"),rs.getString("cbirth"),
-			rs.getString("cemail"),rs.getString("cphone")
-			,rs.getString("caddress"),rs.getString("cregiday"));*/
 			return member;
 
-		 
 		} finally {
 			if(rs != null) rs.close();
 			if(stmt != null) stmt.close();
