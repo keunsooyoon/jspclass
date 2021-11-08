@@ -97,14 +97,28 @@ public class ProductDAO {
 			if(stmt != null) stmt.close();
 			if(conn != null) conn.close();
 		}
-		
-		
-		
-		
+
 	}
 	
 	
-	
+	public int delete(String id)
+	throws NamingException, SQLException {
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		
+		try {
+			String sql = "DELETE FROM product WHERE pid =?";
+			conn = ConnectionPool.get();
+			stmt = conn.prepareStatement(sql);
+				stmt.setString(1, id);
+
+			int count = stmt.executeUpdate();
+			return (count == 1) ? 1 : 0;
+		}finally {
+			if(stmt != null) stmt.close();
+			if(conn != null) conn.close();
+		}
+	}
 	
 	
 	
