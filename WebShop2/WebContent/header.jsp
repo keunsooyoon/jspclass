@@ -44,6 +44,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="/product/addProduct.jsp">제품등록</a></li>
+            <li><a class="dropdown-item" href="/product/updateProduct.jsp">제품수정</a></li>            
             <li><a class="dropdown-item" href="/member/listMember.jsp">회원관리</a></li>
           </ul>
         </li>

@@ -1,3 +1,4 @@
+<%@page import="dao.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,6 +12,15 @@
 	<div class="alert alert-secondary" role="alert">
 		<h1 class="display-3">상품 정보</h1>
 	</div>
+	<%
+	String a = request.getParameter("id");
+
+	ProductObj product = (new ProductDAO()).getDetail(a);
+
+%>
+	
+	
+	
 	<div class="container">
 		<div class="row">
 			<div class="col-ma-5">

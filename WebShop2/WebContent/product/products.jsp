@@ -28,7 +28,7 @@
 				<img src="/images/<%=product.getPfilename() %>" style="width:100%">
 				<h3><%=product.getPname() %></h3>
 				<p><%=product.getPprice() %>원	
-				<p><a href="" class="btn btn-secondary" role="button">상세정보 &raquo;</a>		
+				<p><a href="detailProduct.jsp?id=<%=product.getPid() %>" class="btn btn-secondary" role="button">상세정보 &raquo;</a>		
 			</div>
 			<%} %>
 		</div>
