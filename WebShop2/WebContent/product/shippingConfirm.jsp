@@ -12,7 +12,8 @@
 	<div class="alert alert-secondary" role="alert">
 		<h1 class="display-3">배송 정보 확인</h1>
 	</div>
-<% request.setCharacterEncoding("UTF-8");
+<% 
+	request.setCharacterEncoding("UTF-8");
 	String pname = request.getParameter("pname");
 	String price = request.getParameter("price");
 
@@ -81,7 +82,7 @@
 				<td class="text-center text-danger"><strong><%=price%> </strong></td>
 			</tr>
 			</table>			
-				<a href="./shippingThanks.jsp"  class="btn btn-success" role="button"> 주문 완료 </a>
+				<a href="./shippingThanks.jsp?pname=pname&pprice=price"  class="btn btn-success" role="button"> 주문 완료 </a>
 				<a href="./shippingCancel.jsp" class="btn btn-secondary" role="button"> 취소 </a>			
 		</div>
 	</div>

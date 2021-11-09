@@ -38,7 +38,7 @@ public class MemberDAO {
 	}
 
 	public int join(String id, String password, String name, String gender, String birth, String mail, String phone,
-			String address) throws NamingException, SQLException {
+		String address) throws NamingException, SQLException {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;

@@ -11,13 +11,11 @@
 	<div class="alert alert-secondary" role="alert">
 		<h1 class="display-3">배송 정보 입력</h1>
 	</div>
-	
-	
-	
+
 	
 	
 		<div class="container">
-		<form name="newMember" class="form-horizontal"  action=" shippingCookie.jsp" method="post">
+		<form name="newMember" class="form-horizontal"  action=" shippingCookie.jsp?pname=<%=request.getParameter("pname")%>&price=<%=request.getParameter("pprice")%>" method="post">
 			<div class="form-group  row">
 				<label class="col-sm-2 ">상품명</label>
 				<div class="col-sm-3">

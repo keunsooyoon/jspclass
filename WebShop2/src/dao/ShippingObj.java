@@ -8,56 +8,65 @@ public class ShippingObj {
 	private String pprice;
 	private String ppricetotal;
 	private String paccount;
-	private String pstatus;
+	private String paddress;
 	private String pdate;
+	private String pstatus;
 	
 	
-	public ShippingObj(String cid, String pname, String pprice, String ppricetotal, String paccount, String pstatus,
-			String pdate) {
+	public ShippingObj(String cid, String pname, String pprice, String ppricetotal, String paccount, String paddress,
+			String pdate, String pstatus) {
 		super();
 		this.cid = cid;
 		this.pname = pname;
 		this.pprice = pprice;
 		this.ppricetotal = ppricetotal;
 		this.paccount = paccount;
-		this.pstatus = pstatus;
+		this.paddress = paddress;
 		this.pdate = pdate;
+		this.pstatus = pstatus;
 	}
 
 
 	public String getCid() {
-		return cid;
+		return this.cid;
 	}
 
 
 	public String getPname() {
-		return pname;
+		return this.pname;
 	}
 
 
 	public String getPprice() {
-		return pprice;
+		return this.pprice;
 	}
 
 
 	public String getPpricetotal() {
-		return ppricetotal;
+		return this.ppricetotal;
 	}
 
 
 	public String getPaccount() {
-		return paccount;
+		return this.paccount;
 	}
 
 
-	public String getPstatus() {
-		return pstatus;
+	public String getPaddress() {
+		return this.paddress;
 	}
 
 
 	public String getPdate() {
-		return pdate;
+		return this.pdate;
 	}
+
+
+	public String getPstatus() {
+		return this.pstatus;
+	}
+
+	
 	
 	
 	

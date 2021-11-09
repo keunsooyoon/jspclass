@@ -1,3 +1,5 @@
+<%@page import="dao.ShippingDAO"%>
+<%@page import="java.net.URLDecoder"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,8 +15,50 @@
 	</div>
 	
 <%
+	request.setCharacterEncoding("UTF-8");
+	String pname = request.getParameter("pname");
+	String price = request.getParameter("price");
+	String shipping_name= "";
+	String shipping_shippingdate= "";
+	String shipping_account= "";
+	String shipping_zipcode= "";
+	String shipping_address= "";
 
+	Cookie[] cookies = request.getCookies();
 
+	if (cookies != null) {
+		for( int i = 0 ; i < cookies.length ; i++) {
+			Cookie thisCookie = cookies[i];
+			String n = thisCookie.getName();
+			if (n.equals("shipping_name"))
+				shipping_name = URLDecoder.decode((thisCookie.getValue()), "utf-8");
+			if (n.equals("shipping_shippingdate"))
+				shipping_shippingdate = URLDecoder.decode((thisCookie.getValue()), "utf-8");
+			if (n.equals("shipping_account"))
+				shipping_account = URLDecoder.decode((thisCookie.getValue()), "utf-8");
+			if (n.equals("shipping_zipcode"))
+				shipping_zipcode = URLDecoder.decode((thisCookie.getValue()), "utf-8");
+			if (n.equals("shipping_address"))
+				shipping_address = URLDecoder.decode((thisCookie.getValue()), "utf-8");
+		}
+	}
+	
+	ShippingDAO dao = new ShippingDAO();
+	//pdescription = pdescription.replace("\r\n","<br/>");
+	
+	String cid = "333";
+	String ppricetotal = "0";
+	int code = dao.insert(cid, pname, price, ppricetotal, shipping_account,shipping_address);
+	
+	if (code == 1) {
+		response.sendRedirect("/product/products.jsp");
+	}else{
+		response.sendRedirect("addProduct.jsp");
+	}
+	
+	
+	
+	
 
 
 %>	
