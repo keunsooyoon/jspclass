@@ -1,3 +1,17 @@
+CREATE TABLE shipping(
+	cid int PRIMARY KEY,
+	pname VARCHAR(32),
+	pprice VARCHAR(32),
+	ppricetotal VARCHAR(32),
+	paccount VARCHAR(32),
+	pstatus VARCHAR(32),
+	pdate DATE
+) DEFAULT CHARSET=utf8;
+
+
+
+
+
 CREATE TABLE member(
 	cid VARCHAR(32) PRIMARY KEY,
 	cpassword VARCHAR(32),

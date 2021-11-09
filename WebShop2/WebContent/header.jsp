@@ -17,6 +17,7 @@
             쇼핑몰</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="/product/products.jsp">제품목록</a></li>
+            <li><a class="dropdown-item" href="/product/shippingList.jsp">구매내역</a></li>
             <li><a class="dropdown-item" href="#">장바구니</a></li>
           </ul>
         </li>
@@ -44,7 +45,8 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="/product/addProduct.jsp">제품등록</a></li>
-            <li><a class="dropdown-item" href="/product/updateProduct.jsp">제품수정</a></li>            
+            <li><a class="dropdown-item" href="/product/updateProduct.jsp">제품수정</a></li>  
+            <li><a class="dropdown-item" href="/product/updateProduct.jsp">배송관리</a></li>            
             <li><a class="dropdown-item" href="/member/listMember.jsp">회원관리</a></li>
           </ul>
         </li>

@@ -81,9 +81,8 @@
 				<td class="text-center text-danger"><strong><%=price%> </strong></td>
 			</tr>
 			</table>			
-				<a href="./ShippingInfo.jsp?cartId="class="btn btn-secondary" role="button"> 이전 </a>
-				<a href="./thankCustomer.jsp"  class="btn btn-success" role="button"> 주문 완료 </a>
-				<a href="./checkOutCancelled.jsp" class="btn btn-secondary"	role="button"> 취소 </a>			
+				<a href="./shippingThanks.jsp"  class="btn btn-success" role="button"> 주문 완료 </a>
+				<a href="./shippingCancel.jsp" class="btn btn-secondary" role="button"> 취소 </a>			
 		</div>
 	</div>
 	<%@ include file = "/footer.jsp" %>	
