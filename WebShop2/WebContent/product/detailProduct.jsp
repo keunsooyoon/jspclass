@@ -32,7 +32,7 @@
 			<p><b>상품코드 : <%=product.getPid() %>
 			<p><b>상품가격 : <%=product.getPprice() %>
 			<p><form action="addCart.jsp?id=<%=product.getPid() %>" method="post">
-				<a href="shippingInfo.jsp?pname=<%=product.getPname() %>&pprice=<%=product.getPprice() %>" class="btn btn-info" onclick="addToCart()">상품주문 &raquo;</a>
+				<a href="shippingInfo.jsp?pname=<%=product.getPname() %>&price=<%=product.getPprice() %>" class="btn btn-info" onclick="addToCart()">상품주문 &raquo;</a>
 				<a href="cart.jsp" class="btn btn-warning">장바구니 &raquo;</a>
 				<a href="products.jsp" class="btn btn-secondary">상품목록&raquo;</a>
 			</form>

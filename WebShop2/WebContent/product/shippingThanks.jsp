@@ -16,8 +16,8 @@
 	
 <%
 	request.setCharacterEncoding("UTF-8");
-	String pname = request.getParameter("pname");
-	String price = request.getParameter("price");
+	String shipping_pname = "";
+	String shipping_price = "";
 	String shipping_name= "";
 	String shipping_shippingdate= "";
 	String shipping_account= "";

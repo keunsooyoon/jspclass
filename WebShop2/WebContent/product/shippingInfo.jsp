@@ -12,20 +12,28 @@
 		<h1 class="display-3">배송 정보 입력</h1>
 	</div>
 
+	<%
+	String pname = request.getParameter("pname");
+	String price = request.getParameter("price");
 	
+	%>
 	
 		<div class="container">
-		<form name="newMember" class="form-horizontal"  action=" shippingCookie.jsp?pname=<%=request.getParameter("pname")%>&price=<%=request.getParameter("pprice")%>" method="post">
+		<form name="newMember" class="form-horizontal"  action="shippingCookie.jsp" method="post">
+			<input name="pname" type="hidden" value=<%=pname%>>
+			<input name="price" type="hidden" value=<%=price%>>
+	
+		
 			<div class="form-group  row">
 				<label class="col-sm-2 ">상품명</label>
 				<div class="col-sm-3">
-					<input name="pname" type="text" class="form-control" disabled value=<%=request.getParameter("pname")%>>
+					<input name="a" type="text" class="form-control" disabled value=<%=pname%>>
 				</div>
 			</div>
 			<div class="form-group  row">
 				<label class="col-sm-2 ">가격</label>
 				<div class="col-sm-3">
-					<input name="pprice" type="text" class="form-control" disabled value=<%=request.getParameter("pprice")%>>
+					<input name="b" type="text" class="form-control" disabled value=<%=price%>>
 				</div>
 			</div>
 
