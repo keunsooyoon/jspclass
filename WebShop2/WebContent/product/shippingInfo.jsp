@@ -9,11 +9,30 @@
 <body>
 <%@ include file = "/header.jsp" %>
 	<div class="alert alert-secondary" role="alert">
-		<h1 class="display-3">배송 정보</h1>
+		<h1 class="display-3">배송 정보 입력</h1>
 	</div>
 	
+	
+	
+	
+	
 		<div class="container">
-		<form name="newMember" class="form-horizontal"  action=" shippingCheck.jsp" method="post">
+		<form name="newMember" class="form-horizontal"  action=" shippingConfirm.jsp" method="post">
+			<div class="form-group  row">
+				<label class="col-sm-2 ">상품명</label>
+				<div class="col-sm-3">
+					<input name="pname" type="text" class="form-control" disabled value=<%=request.getParameter("pname")%>>
+				</div>
+			</div>
+			<div class="form-group  row">
+				<label class="col-sm-2 ">가격</label>
+				<div class="col-sm-3">
+					<input name="pprice" type="text" class="form-control" disabled value=<%=request.getParameter("pprice")%>>
+				</div>
+			</div>
+
+
+
 			<div class="form-group  row">
 				<label class="col-sm-2 ">성명</label>
 				<div class="col-sm-3">
