@@ -13,9 +13,9 @@
 		<h1 class="display-3">배송 정보 확인</h1>
 	</div>
 <% request.setCharacterEncoding("UTF-8");
+	String pname = request.getParameter("pname");
+	String price = request.getParameter("price");
 
-	String shipping_pname= "";
-	String shipping_price= "";
 	String shipping_name= "";
 	String shipping_shippingdate= "";
 	String shipping_account= "";
@@ -28,11 +28,6 @@
 		for( int i = 0 ; i < cookies.length ; i++) {
 			Cookie thisCookie = cookies[i];
 			String n = thisCookie.getName();
-			
-			if (n.equals("shipping_pname"))
-				shipping_pname = URLDecoder.decode((thisCookie.getValue()), "utf-8");
-			if (n.equals("shipping_price"))
-				shipping_price = URLDecoder.decode((thisCookie.getValue()), "utf-8");
 			if (n.equals("shipping_name"))
 				shipping_name = URLDecoder.decode((thisCookie.getValue()), "utf-8");
 			if (n.equals("shipping_shippingdate"))
@@ -73,17 +68,17 @@
 				<th class="text-center">소계</th>
 			</tr>
 			<tr>
-				<td class="text-center"><em><%=shipping_pname%> </em></td>
+				<td class="text-center"><em><%=pname%> </em></td>
 				<td class="text-center">1</td>
-				<td class="text-center"><%=shipping_price%>원</td>
-				<td class="text-center"><%=shipping_price%>원</td>
+				<td class="text-center"><%=price%>원</td>
+				<td class="text-center"><%=price%>원</td>
 			</tr>
 
 			<tr>
 				<td> </td>
 				<td> </td>
 				<td class="text-right">	<strong>총액: </strong></td>
-				<td class="text-center text-danger"><strong><%=shipping_price%> </strong></td>
+				<td class="text-center text-danger"><strong><%=price%> </strong></td>
 			</tr>
 			</table>			
 				<a href="./ShippingInfo.jsp?cartId="class="btn btn-secondary" role="button"> 이전 </a>

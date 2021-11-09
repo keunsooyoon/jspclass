@@ -17,7 +17,7 @@
 	
 	
 		<div class="container">
-		<form name="newMember" class="form-horizontal"  action=" shippingConfirm.jsp" method="post">
+		<form name="newMember" class="form-horizontal"  action=" shippingCookie.jsp" method="post">
 			<div class="form-group  row">
 				<label class="col-sm-2 ">상품명</label>
 				<div class="col-sm-3">
