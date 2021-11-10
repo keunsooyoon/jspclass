@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoiniApplication<demoini>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.demoini.DemoiniApplication",
+            "projectName": "demoini",
+            "args": ""
+        }
+    ]
+}
