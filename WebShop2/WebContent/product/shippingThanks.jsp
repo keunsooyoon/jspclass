@@ -30,6 +30,10 @@
 		for( int i = 0 ; i < cookies.length ; i++) {
 			Cookie thisCookie = cookies[i];
 			String n = thisCookie.getName();
+			if (n.equals("shipping_pname"))
+				shipping_pname = URLDecoder.decode((thisCookie.getValue()), "utf-8");
+			if (n.equals("shipping_price"))
+				shipping_price = URLDecoder.decode((thisCookie.getValue()), "utf-8");
 			if (n.equals("shipping_name"))
 				shipping_name = URLDecoder.decode((thisCookie.getValue()), "utf-8");
 			if (n.equals("shipping_shippingdate"))
@@ -48,7 +52,7 @@
 	
 	String cid = "333";
 	String ppricetotal = "0";
-	int code = dao.insert(cid, pname, price, ppricetotal, shipping_account,shipping_address);
+	int code = dao.insert(cid, shipping_pname, shipping_price, ppricetotal, shipping_account,shipping_address);
 	
 	if (code == 1) {
 		response.sendRedirect("/product/products.jsp");
@@ -56,12 +60,7 @@
 		response.sendRedirect("addProduct.jsp");
 	}
 	
-	
-	
-	
-
-
-%>	
+	%>	
 	<div class="container">
 		<h2 class="alert alert-danger">주문해주셔서 대단히 감사합니다.  </h2>
 	
